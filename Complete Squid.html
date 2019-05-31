@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+   
+   <head>
+      <title>SSq ID</title>
+        
+          
+      
+      <script>
+            var looper;
+            var degrees = 0;
+            function rotateAnimation(el,speed){
+	        var elem = document.getElementById(el);
+	        if(navigator.userAgent.match("Chrome")){
+		            elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	        } else if(navigator.userAgent.match("Firefox")){
+		            elem.style.MozTransform = "rotate("+degrees+"deg)";
+	        } else if(navigator.userAgent.match("MSIE")){
+		            elem.style.msTransform = "rotate("+degrees+"deg)";
+	        } else if(navigator.userAgent.match("Opera")){  
+		            elem.style.OTransform = "rotate("+degrees+"deg)";
+	        } else {
+		            elem.style.transform = "rotate("+degrees+"deg)";
+	        }
+	        looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	        degrees++;
+	        if(degrees > 359){
+		            degrees = 1;
+	        }
+	        document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+            }
+      </script>
+        
+        
+        <style>
+          
+          
+          #Squid   {
+          width: 18%;
+          height: 25%;
+          position: absolute;
+          right: 3%;
+            
+           
+           
+          }
+          
+          /* size and position of ink*/
+          #ink   {
+            width: 40px;
+            height: 40px;
+            position: absolute; 
+            right: 18%;
+            bottom: 77%;
+          }
+        </style>
+     
+    </head>
+        <body>
+          <img id = "Squid" src = "https://lh3.googleusercontent.com/UQqFCI99alPa3dj1RPR_SxTMJlf2Gn6FBU5ua_t27Hp3IIkNesRM7msMGqBfRQn92-4DloXQm388-vLxNHxDROv4SN0u6yKPoAYqnLy1uWyXZXKt8wKfY1fRttuefyg10FPVkkcC=w2400"img>
+         
+          <h2 style="width:200px;" id="status"></h2>
+         
+         <img id= "ink" src= "https://lh3.googleusercontent.com/GT47nnSdRDXqBmLkB2hxgKpq1DxcREPFreNtHbztQzaIUpMiX_p9YuCMmmVvJ8WbUpfst7hSG_ITckx5Kx-8WQ2dYqtpangaPLpZ8YvhqngNUpT0ECxzZlNPMGirhLgheq21DmtBuQ=w2400" img>
+          
+         <script>rotateAnimation("ink",2);</script>
+        
+          <p><button onclick="myMove()">shoot ink </button></p> 
+          
+          <div id ="squid">
+           <div id ="Ink"></div>
+          </div>
+          
+          <script>
+          
+            function myMove() {
+              var elem = document.getElementById("ink");   
+              var pos = 300;
+              var id = setInterval(frame, 5);
+                function frame() {
+                  if (pos == 450) {
+                    clearInterval(id);
+                  } else {
+                    pos++; 
+                    elem.style.top = pos + "pos"; 
+                     elem.style.right = pos + "px"; 
+                  }
+                }
+            }
+            
+	        </script>
+        </body>
+</html>
