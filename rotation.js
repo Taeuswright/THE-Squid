@@ -23,4 +23,3 @@ if(degrees > 359){
 }
 document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
 }
-rotateAnimation("ink",2);
