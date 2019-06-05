@@ -1,0 +1,18 @@
+#Squid   {
+    width: 18%;
+    height: 25%;
+    position: absolute;
+    right: 3%;
+      
+     
+     
+    }
+    
+    /* size and position of ink*/
+     #ink   {
+      width: 40px;
+      height: 40px;
+      position: absolute; 
+      right: 18%;
+      bottom: 53%;
+    } 
