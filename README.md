@@ -1,8 +1,8 @@
 # THE-Squid
 makin a squid 
 
-* Building a squid that shoots ink across the screen
+* shoots rotating ink across the screen
 
 * bubbles float up from the bottom continuously 
 
-*
+* Displays the words : PEC, the safest safety company, where all the chairs have seat belts
