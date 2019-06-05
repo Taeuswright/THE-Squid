@@ -8,7 +8,7 @@
       <script>
             
      
-            var looper;
+           
             var degrees = 0;
 
             function rotateAnimation(el,speed){
@@ -81,7 +81,7 @@
           <img id= "ink" src= "https://lh3.googleusercontent.com/GT47nnSdRDXqBmLkB2hxgKpq1DxcREPFreNtHbztQzaIUpMiX_p9YuCMmmVvJ8WbUpfst7hSG_ITckx5Kx-8WQ2dYqtpangaPLpZ8YvhqngNUpT0ECxzZlNPMGirhLgheq21DmtBuQ=w2400" img>
           
          
-          <script>rotateAnimation("ink",2);</script>
+          <script>rotateAnimation("ink",5);</script>
           <div id ="squid">
            <div id ="Ink"></div>
           </div>
@@ -91,7 +91,7 @@
             function myMove() {
               var elem = document.getElementById("ink");   
               var pos = 313;
-              var id = setInterval(frame, 5);
+              var id = setInterval(frame, 2);
                 function frame() {
                   if (pos == 1600) {
                     clearInterval(id);
