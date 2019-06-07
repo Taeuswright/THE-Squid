@@ -4,7 +4,7 @@
   <head>
     <title>SSQuid ID</title>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>   
+     
     
     <link href="./main.css" rel="stylesheet"> 
         
@@ -42,17 +42,7 @@
          
     <h2 style="width:200px;" id="status"></h2>
          
-    <script>
-        function bigImg(x) {
-          x.style.height = "25%";
-          x.style.width = "15%";
-        }
-            
-        function normalImg(x) {
-          x.style.height = "25%";
-          x.style.width = "18%";
-        }
-      </script>       
+    
               
       <link href="./squid-and-ink.css" rel="stylesheet"> 
           
@@ -65,22 +55,6 @@
         <div id ="Ink"></div>
         </div>
           
-        <script>
-          function myMove() {
-            var elem = document.getElementById("ink");   
-            var pos = 300;
-            var id = setInterval(frame, 5);
-            function frame() {
-            if (pos == 1550) {
-              clearInterval(id);
-          } else {
-              pos++; 
-              elem.style.right = pos + 'px'; 
-              elem.style.left = pos + 'pos'; 
-          
-              } 
-            }
-          }        
-    </script>
+        <script src="animation.js"></script>
   </body>
 </html>
